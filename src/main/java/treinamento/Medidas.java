@@ -6,8 +6,8 @@ package treinamento;
 
 public class Medidas {
     //3.1 - atributos - caracteristicas (adjetivo)
-    //3.2 - Metódos(faz e fica quietinho) e Funções(faz e mostra) eles são(verbos, são as coisas que a Coisa sabe fazer)
 
+    //3.2 - Metódos (faz e fica quietinho) e Funções(faz e mostra) eles são(verbos, são as coisas que a Coisa sabe fazer)
     //Primeira função tem nome pré determinado, carrega logo que se der uma ordem (static), e dizer o que ela é (metodo ou função)
     //é assim que termina que é uma método (void)ele faz e pronto, e temos que dar um nome para esse metodo(main)ele é o gatilho
     // main()- pra chamar as demais estruturas
@@ -39,8 +39,51 @@ public class Medidas {
        // comprimento = 3;
        // resultado = largura * comprimento;
        // System.out.println("A aréa é de " + resultado);
-        calcularAreaModoCurto();
-        calcularModoExtenso();
+        //Condicional = Verificar uma condição - Fazr uma pergnta para uma pessoa, um hardware ou software
+        //smitch = selecionar o comportamento do programa conforme a escolha da pessoa ou do software - troca
+
+        String opcao = "melancia";// variavel chamada opcao com o método é aqui que vai ir trocando o seletor
+        switch (opcao){
+            case "ifSimples":
+                System.out.println("Você escolheu executar o método ifSimples");
+                ifSimples(); // é a função ou método  a ser chamado, declarando ele
+                break;// para de executar
+
+            case "curto":
+                System.out.println("Você escolheu executa o método calcularAreaModoCurto");
+                calcularAreaModoCurto();
+                break;
+
+            case "extenso":
+                System.out.println("Você escolheu executa o método calcularModoExtenso");
+                calcularModoExtenso();
+                break;
+
+            default: // quando se escolhe algo não relacionado nos case
+                System.out.println("Você escolheu ouro valor que não tem ação associada");
+
+        }
+
+
+
+
+
+    }
+
+
+    public static void ifSimples(){
+        //Condicional = Verificar uma condição - Fazr uma pergnta para uma pessoa, um hardware ou software
+        // if = se
+        // else = senão
+
+        String modo = "curto";
+
+        if (modo == "curto"){
+            calcularAreaModoCurto();
+        }
+        else{
+            calcularModoExtenso();
+        }
 
     }
 
