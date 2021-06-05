@@ -41,7 +41,7 @@ public class Medidas {
        // resultado = largura * comprimento;
        // System.out.println("A aréa é de " + resultado);
         System.out.println("Calculo de Areas");
-
+        System.out.println("Bom dia!!!");
 
 
     }
