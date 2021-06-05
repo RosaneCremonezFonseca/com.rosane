@@ -1,9 +1,9 @@
 // 1- Pacote
 package treinamento;
 // 2- referência as bibliotecas
+import java.util.Scanner;
 
 // 3 - classe é o nome de alguma Coisa, objeto - sempre substantivo
-
 public class Medidas {
     //3.1 - atributos - caracteristicas (adjetivo)
 
@@ -26,8 +26,6 @@ public class Medidas {
     // + concatenador, exibe
     public static void main(String[] args){
        //System.out.println("Meu primeiro codigo em java!!!");
-      // System.out.println("Preciso tomar café!!");
-       // System.out.println("VOLTAREMOS AS 12:34!!");
 
         //Calculo de area - exemplo: o tamanho do tapete ou do piso
         //criar uma variavel
@@ -39,34 +37,65 @@ public class Medidas {
        // comprimento = 3;
        // resultado = largura * comprimento;
        // System.out.println("A aréa é de " + resultado);
-        //Condicional = Verificar uma condição - Fazr uma pergnta para uma pessoa, um hardware ou software
+        //Condicional = Verificar uma condição - Fazer uma pergunta para uma pessoa, um hardware ou software
+
+        // Utilizar a classe SCANNER DO JAVA para ler a escolha do usuário no console
+        // Scanner está na util do java, e deve-se colocar como nome scanner em minusculo é o filho da classe Scanner, o filho herda tudo do pai
+        // scanner vai receber new Scanner; ele é filho(scanner) do pai(Scanner) e vai receber (=) a herança do pai, isso é estanciar!!
+        // estancia seria uma cópia! e essa estancia que vai atender nesse momento.
+        // seria assim: scanner(minusculo) é um novo objeto que a gente está criando, ele é do tipo Scanner e (new Scanner) está recebendo as habilidades tipicas do Scanner
+        // System.in é a entrada
+        //System.out é a saida
+        Scanner scanner = new Scanner(System.in);  //esse processo chama-se instanciar, sempre em essa carinha
+        System.out.println(" M E N U  D E  O P Ç Õ E S ");
+        System.out.println("c - Calcular Area Modo Curto");
+        System.out.println("e - Calcular Area Modo Extenso");
+        System.out.println("i - If Simples");
+        System.out.println("d - contarAteDez");
+        System.out.println("r - Contagem regressiva de 0 a 10");
+        System.out.println("Digite  a opçao desejada: ");
+        String opcao = scanner.next();// pega a letra que for digitada
+
+
+
         //smitch = selecionar o comportamento do programa conforme a escolha da pessoa ou do software - troca
 
-        String opcao = "melancia";// variavel chamada opcao com o método é aqui que vai ir trocando o seletor
+       // String opcao = "melancia";// variavel chamada opcao com o método é aqui que vai ir trocando o seletor
         switch (opcao){
-            case "ifSimples":
-                System.out.println("Você escolheu executar o método ifSimples");
+            case "i":
+            case "I":
+                System.out.println("Você escolheu executar o método ifSimples");//saida do sistema
                 ifSimples(); // é a função ou método  a ser chamado, declarando ele
-                break;// para de executar
+                break;// para de executar, se tirar ele executa tudo na sequência
 
-            case "curto":
+            case "c":
+            case "C":
                 System.out.println("Você escolheu executa o método calcularAreaModoCurto");
                 calcularAreaModoCurto();
                 break;
 
-            case "extenso":
+            case "e":
+            case "E":
                 System.out.println("Você escolheu executa o método calcularModoExtenso");
                 calcularModoExtenso();
+                break;
+
+            case "d":
+            case "D":
+                System.out.println("Você escolheu executa o método contarAteDez");
+                contarAteDez();
+                break;
+
+            case "r":
+            case "R":
+                System.out.println("Você escolheu executa o método contagemRegressiva");
+                contagemRegressiva();
                 break;
 
             default: // quando se escolhe algo não relacionado nos case
                 System.out.println("Você escolheu ouro valor que não tem ação associada");
 
         }
-
-
-
-
 
     }
 
@@ -111,6 +140,24 @@ public class Medidas {
 
     }
 
+    public static void contarAteDez(){
+        // Loops ou repetições
+        // for é uma repetição incondicional ( pq vc vai dizer o quanto for madado ele repetir)
+        // variavel int (nome0 numero, = recebe 1; numero <= 10 , numero ++ ( vai fazer ir contando + 1)
+        //
 
+        System.out.println("Contagem crescente");
 
+        for(int numero = 1; numero <= 10; numero ++){
+            System.out.println(numero); // vai ir chamando a variavel numero
+        }
+
+    }
+    public static void contagemRegressiva(){
+        System.out.println("Contagem crescente");
+
+        for(int numero = 10; numero > -1; numero --){
+            System.out.println(numero);
+        }
+    }
 }
