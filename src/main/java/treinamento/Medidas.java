@@ -6,7 +6,6 @@ package treinamento;
 
 public class Medidas {
     //3.1 - atributos - caracteristicas (adjetivo)
-
     //3.2 - Metódos(faz e fica quietinho) e Funções(faz e mostra) eles são(verbos, são as coisas que a Coisa sabe fazer)
 
     //Primeira função tem nome pré determinado, carrega logo que se der uma ordem (static), e dizer o que ela é (metodo ou função)
@@ -40,12 +39,24 @@ public class Medidas {
        // comprimento = 3;
        // resultado = largura * comprimento;
        // System.out.println("A aréa é de " + resultado);
-        System.out.println("Calculo de Areas");
-        System.out.println("Bom dia!!!");
-
+        calcularAreaModoCurto();
+        calcularModoExtenso();
 
     }
-    public void calcularModoExtenso(){
+
+    public static void calcularAreaModoCurto(){
+
+            // metodo reduzido
+            int largura = 4;
+            int comprimento = 3;
+
+            System.out.println("Para a largura de " + largura + "m e o comprimento de "
+                    + comprimento + "m a area é de " + largura * comprimento + "m2");
+
+        }
+
+
+    public static void calcularModoExtenso(){
 
         int largura = 5;
         int comprimento = 6;
@@ -58,13 +69,5 @@ public class Medidas {
     }
 
 
-    public void calcularAreaReduzida(){
-        // metodo reduzido
-        int largura = 4;
-        int comprimento = 3;
 
-        System.out.println("Para a largura de " + largura + "m e o comprimento de "
-                + comprimento + "m a area é de " + largura * comprimento + "m2");
-
-    }
 }
