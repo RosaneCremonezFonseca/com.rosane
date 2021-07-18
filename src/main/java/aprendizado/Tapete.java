@@ -3,9 +3,48 @@ package aprendizado;
 public class Tapete {
 
     public static void main(String[] args){
+        // EXTRUTURA switch
+        //variavel
+        String opcao = "ifSimples";
+
+        switch (opcao){
+             // seletor
+            case "melancia":
+                // escrever
+                System.out.println("Você escolheu o metódo ifSimples");
+                // chamar
+                ifSimples();
+                // para parar
+                break;
+            case "curto":
+                System.out.println("Voce escolheu o metódo calcularAreaModoCurto");
+                calcularAreaModoCurto();
+                break;
+            case "extenso":
+                System.out.println("Você escolheu o método calcularAreaModoExtenso ");
+                calcularAreaModoExtenso();
+                break;
+            default:
+                System.out.println("Você escolheu outro valor, sem ação associada");
+                break;
+        }
+
+
         //chamar os metados abaixo
-        calcularAreaModoCurto();
-        calcularAreaModoExtenso();
+        //calcularAreaModoCurto();
+        //calcularAreaModoExtenso();
+    }
+
+    public static void ifSimples(){
+        //variavel
+        String modo = "curto";
+
+        if (modo == "curto"){
+            calcularAreaModoCurto();
+        }
+        else {
+            calcularAreaModoExtenso();
+        }
     }
 
     //para  metodo principal chamar os outros metodos, tem que ter static nele
